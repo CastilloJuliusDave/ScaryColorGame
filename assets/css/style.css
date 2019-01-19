@@ -1,0 +1,143 @@
+*{
+     margin:0;
+     padding: 0;
+}
+ html,body{
+    height: 100%;
+    background: url('../images/imgBG2.jpg') no-repeat center center fixed;
+    font-family: 'Indie Flower', cursive;
+    background-size: cover;
+    transform-origin: 0 0;
+    width: 100%; 
+    margin: 0;
+}
+    .div {
+      border: 2px solid #666;
+      width: 895px;
+      height: 350px;
+      font-size: 8em;
+      text-align: center;
+      font-family: 'Alfa Slab One', cursive;
+      margin-top: 10px;
+      vertical-align: middle;
+      display: inline-block;
+      line-height: 350px; 
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: black;
+    }
+    .divChoices {
+      border: 1px solid #666;
+      width: 223px;
+      height: 50px;
+      font-size: 2em;
+      text-align: center;
+      font-family: 'Alfa Slab One', cursive;
+      margin-top: 10px;
+      vertical-align: middle;
+      display: inline-block;
+      line-height: 50px; 
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: ghostwhite;
+    }
+    .divStartGame {
+      border: 1px solid #666;
+      width: 250px;
+      height: 75px;
+      font-size: 2em;
+      text-align: center;
+      font-family: 'Alfa Slab One', cursive;
+      margin-top: 10px;
+      vertical-align: middle;
+      display: inline-block;
+      line-height: 50px; 
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: ghostwhite;
+    }
+    .divLevel {
+      border: 1px solid #666;
+      width: 150px;
+      height: 50px;
+      font-size: 1.5em;
+      text-align: center;
+      font-family: 'Alfa Slab One', cursive;
+      margin-top: 10px;
+      vertical-align: middle;
+      display: inline-block;
+      line-height: 50px; 
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: ghostwhite;
+      opacity: .9;
+    }
+
+    p{
+    font-size: 4em;
+    color: ghostwhite;
+    font-family: 'Exo 2', sans-serif;
+    opacity: .9;
+    }
+    #gameTittle{
+    font-size: 3em;
+    color: ghostwhite;
+    font-family: 'Exo 2', sans-serif;
+    opacity: .9;
+    }
+    .button{
+      position: center;
+      font-size: 2em;
+      border: 2px solid #666;
+    }
+
+    #overlay {
+      position: fixed; /* Sit on top of the page content */
+      display: none; /* Hidden by default */
+      width: 100%; /* Full width (cover the whole page) */
+      height: 100%; /* Full height (cover the whole page) */
+      top: 0; 
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+      z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+      cursor: pointer; /* Add a pointer on hover */
+    }
+    #text{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 50px;
+      color: white;
+      transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+    }
+    #instructions{
+      font-size: 2em;
+      color: ghostwhite;
+      font-family: 'Exo 2', sans-serif;
+      opacity: .9;
+    }
+    #difficulty{
+      font-size: 2em;
+      color: ghostwhite;
+      font-family: 'Exo 2', sans-serif;
+      opacity: .9;
+    }
+    .newFont{
+      font-family: 'Exo 2', sans-serif;
+    }
+    .instructionsList{
+      font-size: 1em;
+      color: ghostwhite;
+      font-family: 'Exo 2', sans-serif;
+      opacity: .9;
+    }
+    .scoreMaruBatsu{
+      font-size: 1.5em;
+      color: navajowhite;
+      font-family: 'Exo 2', sans-serif;
+    }
+    #countPresureTimer{
+      font-size: 1.5em;
+    }
+    #remainingTimer{
+      font-size: 1.5em;
+    }

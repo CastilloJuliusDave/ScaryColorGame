@@ -1,0 +1,113 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+html,body{
+height: 100%;
+}
+
+#cover{
+
+background: url('../images/Troy Logistics Logo-sm.png') center center no-repeat;
+background-size: cover;
+color: white;
+height: 328px;
+text-align: center;
+display: flex;
+align-items: center;
+}
+
+#cover2{
+
+background: url('../images/Troy Logistics Logo-sm.png') center center no-repeat;
+background-size: cover;
+color: white;
+height: 328px;
+text-align: center;
+display: flex;
+align-items: center;
+}
+
+#cover-caption{
+	width: 100%
+}
+
+.section-content{
+	padding: 5rem 0;
+}
+
+.card{
+	padding: 1rem;
+}
+
+/*about*/
+#about{
+	background: url('../images/Troy Logistics Logo-sm.png') center center no-repeat; 
+	background-size: cover;
+}
+
+.about-text{
+	background: rgba(0,0,0,0.8);
+	color: white;
+	padding: 1.875rem;
+}
+/*footer*/
+#footer-main{
+	background: #222;
+	color: white;
+	font-size: 0.8rem;
+	padding:2.5rem 0;
+	list-style: none;
+}
+
+#footer-main a{
+	color: white;
+	list-style: none;
+}
+
+@media(max-width: 500px)
+{
+
+	#cover-caption h1{
+		font-family: italic;
+	}
+}
+
+/*services*/
+.services-text{
+	color: black;
+	padding: 1.875rem;
+}
+
+#services-list{
+	width:100%;
+}
+
+.image-bg {
+    background-size: cover!important;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 767px)
+{
+.image-bg {
+    min-height: 50%;
+	}
+}
+
+
+@media (min-width: 992px)
+{
+.col-md-push-6 {
+    left: 50%;
+	}
+}
+
+@media (min-width: 992px)
+{
+.col-md-pull-6 {
+    right: 50%;
+	}
+}
