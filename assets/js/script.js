@@ -236,7 +236,7 @@ function checkScore(){
     if (cuteImagesEnable == 0 ) {
       TempEndGameNote = "<br/>Click START for a NEW GAME!!<br/><br/>";
     }else {
-      TempEndGameNote = "<br/>Hey Scaredy CAT!<br/>Click START for a NEW GAME!!<br/><br/>";
+      TempEndGameNote = "Hey Scaredy CAT!<br/>Click START for a NEW GAME!!<br/><br/>";
     }
 
 
