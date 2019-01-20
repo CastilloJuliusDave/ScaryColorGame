@@ -162,53 +162,47 @@
     //use generated number to set BG color
   function setGameColor1(){
     if (TextColorFont == TextColorChoice1) {
-      $("#scoreMaru").after('<img class="score" src="assets/images/maru.png" alt="maru" height="29">');
-      maru++;
-      checkScore();
+      maru1();
     }else{
-      $("#scoreBatsu").after('<img class="score" src="assets/images/batsu.png" alt="batsu" height="29">');
-      batsu++;
-      setImages();
-      checkScore();
+      batsu1();
     }
   }
     function setGameColor2(){
     if (TextColorFont == TextColorChoice2) {
-      $("#scoreMaru").after('<img class="score" src="assets/images/maru.png" alt="maru" height="29">');
-      maru++;
-      checkScore();
+      maru1();
     }else{
-      $("#scoreBatsu").after('<img class="score" src="assets/images/batsu.png" alt="batsu" height="29">');
-      batsu++;
-      setImages();
-      checkScore();
+      batsu1();
     }
   }
     function setGameColor3(){
     if (TextColorFont == TextColorChoice3) {
-      $("#scoreMaru").after('<img class="score" src="assets/images/maru.png" alt="maru" height="29">');
-      maru++;
-      checkScore();
+      maru1();
     }else{
-      $("#scoreBatsu").after('<img class="score" src="assets/images/batsu.png" alt="batsu" height="29">');
-      batsu++;
-      setImages();
-      checkScore();
+      batsu1();
     }
   }
     function setGameColor4(){
     if (TextColorFont == TextColorChoice4) {
-      $("#scoreMaru").after('<img class="score" src="assets/images/maru.png" alt="maru" height="29">');
-      maru++;
-      checkScore();
+      maru1();
     }else{
-      $("#scoreBatsu").after('<img class="score" src="assets/images/batsu.png" alt="batsu" height="29">');
-      batsu++;
-      setImages();
-      checkScore();
+      batsu1();
     }
   }
 
+  //if answer is correct
+  function maru1(){
+    $("#scoreMaru").after('<img class="score" src="assets/images/maru.png" alt="maru" height="50">');
+    maru++;
+    checkScore();
+  }
+
+  //if answer is wrong
+  function batsu1(){
+    $("#scoreBatsu").after('<img class="score" src="assets/images/batsu.png" alt="batsu" height="50">');
+    batsu++;
+    setImages();
+    checkScore();
+  }
 function checkScore(){
     items++;
     $("#scoreMaru").replaceWith('<p class="scoreMaruBatsu" style="margin-top: -30px;" id="scoreMaru">Maru-'+maru+'</p>');
@@ -243,7 +237,7 @@ function checkScore(){
     var tempString;
     if (maru > 1) {
       tempString = "Points!";
-        $("#colorName").replaceWith('<div class="div newFont" id="colorName" style="background-color: black; color:ghostwhite;"><h1><br/>'+TempEndGameNote+'You Scored '+maru+'&nbsp;'+tempString+'<br/>Difficulty: '+levelName+'<br/>'+motivationList[0]+'</h1></div>');
+        $("#colorName").replaceWith('<div class="div newFont" id="colorName" style="background-color: black; color:ghostwhite;"><h1>'+TempEndGameNote+'You Scored '+maru+'&nbsp;'+tempString+'<br/>Difficulty: '+levelName+'<br/>'+motivationList[0]+'</h1></div>');
     }else if (maru == 1) {
       tempString = "Peso. Bili ka kausap mo.";
         $("#colorName").replaceWith('<div class="div newFont" id="colorName" style="background-color: black; color:ghostwhite;"><h1>'+TempEndGameNote+'You Scored '+maru+'&nbsp;'+tempString+'<br/>Difficulty: '+levelName+'<br/>'+motivationList[0]+'</h1></div>');
@@ -307,7 +301,7 @@ function checkScore(){
         });
     document.getElementById("countDownTimer").innerHTML = "START!!!";
       stopTimer(); // stoping the previous counting (if any)
-      value = 15; //main time 60seconds
+      value = 60; //main time 60seconds
       timerInterval = setInterval(changeValue, 1000);  
   }
   var stopTimer = function() {
@@ -322,7 +316,7 @@ function checkScore(){
       $("#countPresureTimer").replaceWith('<p style="margin-top: -30px;" id="countPresureTimer">'+tempTimer+' <small>Seconds.</small></p>');
     }
     else{
-      $("#scoreBatsu").after('<img class="score" src="assets/images/batsu.png" alt="batsu" height="29">');
+      $("#scoreBatsu").after('<img class="score" src="assets/images/batsu.png" alt="batsu" height="50">');
       batsu++;
       checkScore();
     }
