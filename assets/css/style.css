@@ -15,29 +15,32 @@
   border: 2px solid #666;
   width: 900px;
   height: 350px;
-  font-size: 8em;
+  font-size: 8.5em;
   text-align: center;
   font-family: 'Alfa Slab One', cursive;
   margin-top: 10px;
   vertical-align: middle;
-  display: inline-block;
   line-height: 350px; 
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
+  margin: auto;
 }
 .divChoices {
   border: 1px solid #666;
   width: 223px;
   height: 50px;
-  font-size: 2em;
+  font-size: 2.3em;
   text-align: center;
   font-family: 'Alfa Slab One', cursive;
   margin-top: 10px;
   vertical-align: middle;
-  display: inline-block;
   line-height: 50px; 
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: ghostwhite;
+  -webkit-text-stroke-color: black;
+}
+.choicesButtonDiv{
+  display: flex;
+  justify-content: center;
 }
 .divStartGame {
   border: 1px solid #666;
@@ -74,6 +77,12 @@ font-size: 4em;
 color: ghostwhite;
 font-family: 'Exo 2', sans-serif;
 opacity: .9;
+}
+.levelFont{
+  font-size: 1.2em;
+  color: black;
+  font-family: 'Exo 2', sans-serif;
+  opacity: .9;
 }
 #gameTittle{
 font-size: 3em;
