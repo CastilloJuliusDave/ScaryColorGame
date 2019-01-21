@@ -79,16 +79,7 @@
       startPresureTimer();
       $(".score").remove();
       $("#levelChoices").hide();
-<<<<<<< HEAD
 
-      $("#choice1").show();
-      $("#choice2").show();
-      $("#choice3").show();
-      $("#choice4").show();
-
-
-=======
->>>>>>> ed164718e6140d32a6792c591ea7a53bc40cbca7
   }
 
   //generate random number to use for setting color name 
@@ -391,17 +382,16 @@
     }
   }
 
-
   //if answer is correct
   function maru1(){
-    $("#scoreMaru").after('<img class="score" src="assets/images/maru.png" alt="maru" height="50">');
+    $("#scoreMaru").after('<img class="score" src="assets/images/maru.png" alt="maru" height="40">');
     maru++;
     checkScore();
   }
 
   //if answer is wrong
   function batsu1(){
-    $("#scoreBatsu").after('<img class="score" src="assets/images/batsu.png" alt="batsu" height="50">');
+    $("#scoreBatsu").after('<img class="score" src="assets/images/batsu.png" alt="batsu" height="40">');
     batsu++;
     setImages();
     checkScore();
@@ -555,7 +545,7 @@ function checkScore(){
     if (PresureTimer != 0) {
       var tempTimer = --PresureTimer;
       document.getElementById("countPresureTimer").innerHTML = tempTimer;
-      $("#countPresureTimer").replaceWith('<p style="margin-top: -30px;" id="countPresureTimer">'+tempTimer+' <small>Seconds.</small></p>');
+      $("#countPresureTimer").replaceWith('<p  id="countPresureTimer">'+tempTimer+' <small>Seconds.</small></p>');
     }
     else{
       $("#scoreBatsu").after('<img class="score" src="assets/images/batsu.png" alt="batsu" height="50">');
@@ -567,7 +557,7 @@ function checkScore(){
   var timerInterval1 = null;
   function startPresureTimer() {
     $(document).ready(function(){
-            $("#countPresureTimer").replaceWith('<p id="countPresureTimer"style="margin-top: -30px;">TIME</p>');
+            $("#countPresureTimer").replaceWith('<p id="countPresureTimer">TIME</p>');
         });
     document.getElementById("countPresureTimer").innerHTML = "New Color START!!!";
       stopPresureTimer(); // stoping the previous counting (if any)

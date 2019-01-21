@@ -19,31 +19,21 @@
 	<img id="cuteImage" class="img-fluid  w-100 h-100" src="assets/images/img1.jpg" alt="marubatsu">
 </div>
 
+
 <section id="game">
 	<div class="container-fluid">
 		<br/>
 		<div class="row">
 			<div class="col-lg-12 mt-4" style="display: inline-flex;">
 				<div class="col-lg-8 col-md-8">
+          <p id="gameTittle" style="margin-top: -30px;">SCARY COLOR GAME!</p>
+         
 					<div class="row mx-5">
-						<div class="col-lg-6 col-md-6 col-sm-12">
-							<p id="gameTittle" style="margin-top: -30px;">SCARY COLOR GAME!</p>
-							<form id="levelChoices">
-							  <div class="form-group" style="margin-top: -30px; display: flex;">
-							    <label id="difficulty" for="sel1">SELECT LEVEL: &nbsp;</label>
-							    <select class="form-control levelFont" id="difficultyLevel" style=" margin-top: 5px; width: 150px">
-							      <option class="levelFont" value="0" selected>Easy Peasy</option>
-							      <option class="levelFont" value="1">Normal</option>
-	  					     	  <option class="levelFont" value="2">HARD!</option>
-							      <option class="levelFont" value="3">HELL MODE!!</option>
-							    </select>
-                  				<p id="levelInfo" style="margin-top: -30px;"></p>
-							  </div>
-							</form>
+						<div class="col-lg-6 col-md-6 col-sm-12" style="width: 100%;">
+               <p style="margin-top: -30px; font-size: 2.5em;" id="countDownTimer">You have 60 seconds.</p>
 						</div>
-						<div class="col-lg-6 col-md-6 col-sm-12" style="text-align: center;">
-							<p style="margin-top: -30px; font-size: 2.5em;" id="countDownTimer">You have 60 seconds.</p>
-							<p style="margin-top: -30px;" id="countPresureTimer"></p>
+						<div class="col-lg-6 col-md-6 col-sm-12" style="text-align: center; width: 100%;">
+							<p id="countPresureTimer"></p>
 						</div>
 					</div>
 					<div class="row mx-5 container-fluid col-md-offset-3" style="margin-top: -1rem;">
@@ -73,8 +63,10 @@
 					</div>
 					<div class="row mx-5 container-fluid col-md-offset-3" style="text-align: center;">
 						<div class="col-lg-12 col-md-12 col-sm-12 col-md-offset-3">
-							<button class="divStartGame" id="StartGame" onclick="startGame()">START!</button>
-							<button class="divStartGame" id="ReStartGame" onclick="startGame()">Restart!</button>
+              <div>
+                <button class="divStartGame btn btn-dark" id="StartGame" onclick="startGame()">START!</button>
+                <button class="divStartGame btn btn-secondary" id="ReStartGame" onclick="startGame()">Restart!</button>
+              </div>
 						</div>
 					</div>
 				</div>
@@ -82,47 +74,78 @@
 					<div class="row">
 						<p style="margin-top: -30px;" id="ScoreTitle">Score</p>
 						<img style="margin-top: -30px;" src="assets/images/maru-batsu.png" alt="marubatsu" height="80">
-						<div class="w-100"></div>
+            <div class="w-100"></div>
 						<div class="col-lg-6 col-md-6">
-							<p class="scoreMaruBatsu" style="margin-top: -30px;" id="scoreMaru">Maru-0</p>
+							<p class="scoreMaruBatsu" id="scoreMaru">Maru-0</p>
 						</div>
 						<div class="col-lg-6 col-md-6">
-							<p class="scoreMaruBatsu" style="margin-top: -30px;" id="scoreBatsu">Batsu-0</p>
+							<p class="scoreMaruBatsu" id="scoreBatsu">Batsu-0</p>
 						</div>
 					</div>
-					<div class="row" style="margin-top: 200px;">
-						<div class="col-lg-12 col-md-12">
-							<h5 id="instructions">Instructions</h5>
-						</div>
-						<div class="col-lg-12 col-md-12 instructionsList">
-							<h6 class="instructionsList">Press START to start the game.</h6>
-							<h6 class="instructionsList">Press RESTART to restart the game.</h6>
-							<h6 class="instructionsList">Choose the correct FONT COLOR from the 4 given choices.</h6>
-							<h6 class="instructionsList">Select Difficulty Level:</h6>
-							<h6 class="instructionsList1">Easy Peasy:</h6>
-							<h6 class="instructionsList1"><em>&emsp;&emsp;&emsp;5 Seconds thinking time</em></h6>
-							<h6 class="instructionsList1"><em>&emsp;&emsp;&emsp;1 BATSU and its Game Over</em></h6>
-							<h6 class="instructionsList1">Normal:</h6>
-							<h6 class="instructionsList1"><em>&emsp;&emsp;&emsp;3 Seconds thinking time</em></h6>
-							<h6 class="instructionsList1"><em>&emsp;&emsp;&emsp;3 BATSU and its Game Over</em></h6>
-							<h6 class="instructionsList1">Hard:</h6>
-							<h6 class="instructionsList1"><em>&emsp;&emsp;&emsp;2 Seconds thinking time</em></h6>
-							<h6 class="instructionsList1"><em>&emsp;&emsp;&emsp;3 BATSU and its Game Over</em></h6>
-							<h6 class="instructionsList1">HELL!!:</h6>
-							<h6 class="instructionsList1"><em>&emsp;&emsp;&emsp;1 Seconds thinking time</em></h6>
-							<h6 class="instructionsList1"><em>&emsp;&emsp;&emsp;3 BATSU and its Game Over</em></h6>
-				            <select class="form-control" id="cuteImages" style=" margin-top: 5px; width: 200px">
-				                <option value="0" selected>Enable Cute Images.</option>
-				                <option value="1">Disable Cute Images.</option>
-				            </select>
-						</div>
-					</div>
+          <div class="row" style="margin-top: 250px; margin-left: 20px">
+            <!-- Button trigger modal -->
+            <form id="levelChoices">
+              <div class="form-group" style="display: flex;">
+                <label id="difficulty" for="sel1">LEVEL: &nbsp;</label>
+                <select class="form-control levelFont" id="difficultyLevel" style="width: 150px">
+                  <option class="levelFont" value="0" selected>Easy Peasy</option>
+                  <option class="levelFont" value="1">Normal</option>
+                    <option class="levelFont" value="2">HARD!</option>
+                  <option class="levelFont" value="3">HELL MODE!!</option>
+                </select>
+              </div>
+          </form>
+          <div class="w-100"></div>
+            <select class="form-control" id="cuteImages" style="margin-top:-25px; width: 200px">
+                <option value="0" selected>Enable Cute Images.</option>
+                <option value="1">Disable Cute Images.</option>
+            </select>
+            <div class="w-100"></div>
+            <button type="button" class="btn btn-dark btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter" style="margin-top:5px; height: 40px;">View Instructions</button>
+
+          </div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 <br><br><br>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Instructions</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h6 class="instructionsList">Press START to start the game.</h6>
+        <h6 class="instructionsList">Press RESTART to restart the game.</h6>
+        <h6 class="instructionsList">Choose the correct FONT COLOR from the 4 given choices.</h6>
+        <h6 class="instructionsList">Select Difficulty Level:</h6>
+        <h6 class="instructionsList1">Easy Peasy:</h6>
+        <h6 class="instructionsList1"><em>&emsp;&emsp;&emsp;5 Seconds thinking time</em></h6>
+        <h6 class="instructionsList1"><em>&emsp;&emsp;&emsp;1 BATSU and its Game Over</em></h6>
+        <h6 class="instructionsList1">Normal:</h6>
+        <h6 class="instructionsList1"><em>&emsp;&emsp;&emsp;3 Seconds thinking time</em></h6>
+        <h6 class="instructionsList1"><em>&emsp;&emsp;&emsp;3 BATSU and its Game Over</em></h6>
+        <h6 class="instructionsList1">Hard:</h6>
+        <h6 class="instructionsList1"><em>&emsp;&emsp;&emsp;2 Seconds thinking time</em></h6>
+        <h6 class="instructionsList1"><em>&emsp;&emsp;&emsp;3 BATSU and its Game Over</em></h6>
+        <h6 class="instructionsList1">HELL!!:</h6>
+        <h6 class="instructionsList1"><em>&emsp;&emsp;&emsp;1 Seconds thinking time</em></h6>
+        <h6 class="instructionsList1"><em>&emsp;&emsp;&emsp;3 BATSU and its Game Over</em></h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark btn-outline-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Footer -->
 <section id="footer">
 		<div class="container">
@@ -166,6 +189,7 @@
 			</div>	
 		</div>
 </section>
+
 </body>
 <script>
    //hide choices at the start of the game 
@@ -179,4 +203,5 @@
   $("#choice8").hide();
   $("#ReStartGame").hide();
 </script>
+<script src="assets/js/bootstrap-js/bootstrap.min.js"></script>
 </html>
