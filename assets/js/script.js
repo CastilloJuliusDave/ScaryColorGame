@@ -56,10 +56,13 @@
       startPresureTimer();
       $(".score").remove();
       $("#levelChoices").hide();
+
       $("#choice1").show();
       $("#choice2").show();
       $("#choice3").show();
       $("#choice4").show();
+
+
   }
 
   //generate random number to use for setting color name 
@@ -243,7 +246,7 @@ function checkScore(){
     var tempString;
     if (maru > 1) {
       tempString = "Points!";
-        $("#colorName").replaceWith('<div class="div newFont" id="colorName" style="background-color: black; color:ghostwhite;"><h1><br/>'+TempEndGameNote+'You Scored '+maru+'&nbsp;'+tempString+'<br/>Difficulty: '+levelName+'<br/>'+motivationList[0]+'</h1></div>');
+        $("#colorName").replaceWith('<div class="div newFont" id="colorName" style="background-color: black; color:ghostwhite;"><h1>'+TempEndGameNote+'You Scored '+maru+'&nbsp;'+tempString+'<br/>Difficulty: '+levelName+'<br/>'+motivationList[0]+'</h1></div>');
     }else if (maru == 1) {
       tempString = "Peso. Bili ka kausap mo.";
         $("#colorName").replaceWith('<div class="div newFont" id="colorName" style="background-color: black; color:ghostwhite;"><h1>'+TempEndGameNote+'You Scored '+maru+'&nbsp;'+tempString+'<br/>Difficulty: '+levelName+'<br/>'+motivationList[0]+'</h1></div>');
