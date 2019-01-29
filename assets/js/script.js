@@ -548,7 +548,7 @@ function checkScore(){
       $("#countPresureTimer").replaceWith('<p  id="countPresureTimer">'+tempTimer+' <small>Seconds.</small></p>');
     }
     else{
-      $("#scoreBatsu").after('<img class="score" src="assets/images/batsu.png" alt="batsu" height="50">');
+      $("#scoreBatsu").after('<img class="score" src="assets/images/batsu.png" alt="batsu" height="40">');
       batsu++;
       checkScore();
     }
